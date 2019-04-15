@@ -30,7 +30,7 @@ class Menu extends Component {
     <ul>
       {items.map(item => (
           <div className="card" key={item.id}>
-      Name:{item.title} 
+      Name:.{item.title} 
               <div>
       Email:{item.food}
                </div>
