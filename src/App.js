@@ -3,6 +3,7 @@ import './App.css';
 import Navigation from './Functions/Navigation';
 import MenuNavbar from './Functions/MenuNavbar';
 import Menu from './Functions/Menu.js';
+import AllMenu from './Components/AllMenu.js'
 // import UserTable from '../src/tables/UserTable.js';
 // var ReactBootstrap = require('react-bootstrap');
 // var MenuItem = ReactBootstrap.MenuItem;
@@ -16,7 +17,8 @@ class App extends Component {
 
 {/* <button className="btn btn-primary m-3" name="breakfast" >Desayuno</button>
         <button className="btn btn-primary m-3" name="dinner" >Almuerzo y/o Cena</button> */}
- <Menu></Menu>
+        <AllMenu></AllMenu>
+ {/* <Menu></Menu> */}
 
 </div>
   
