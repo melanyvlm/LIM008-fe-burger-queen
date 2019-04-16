@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import Menu from '../Functions/Menu.js';
+import Menu from './Menu.js';
+import UserTable from './UserTable.js'
+import './Components.css';
+
 class AllMenu extends Component{
         render() {
         return (
@@ -9,11 +12,13 @@ class AllMenu extends Component{
         <div className="col-md-6 col-xs-9 col-lg-6">
         <Menu></Menu>
          </div>     
-     </div>
          <div className="col-md-6  col-xs-9 col-lg-6">
+         <UserTable></UserTable>
         </div>
   </div>
 </div>
+</div>
+
                 )
   }
  }

@@ -1,10 +1,12 @@
 import React from 'react'
+import './Components.css';
+
 const UserTable = () => (
     <table>
         <thead>
             <tr>
-            <tr>Name</tr>
-            <tr>Username</tr>
+            <th>Name</th>
+            <th>Username</th>
             <th>Actions</th>    
             </tr>
         </thead>
@@ -13,8 +15,8 @@ const UserTable = () => (
                 <td>Name data</td>
                 <td>Username data</td>
                 <td>
-                    <button className="button muted-button">Edit</button>
-                    <button className="button muted-button">Delete</button>
+                    <button className="button usert muted-button">Edit</button>
+                    <button className="button usert muted-button">Delete</button>
                </td>
             </tr>
         </tbody>

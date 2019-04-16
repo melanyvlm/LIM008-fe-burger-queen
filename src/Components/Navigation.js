@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Components.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
@@ -17,8 +18,8 @@ class Navigation extends Component{
       <Nav.Link href="#link">Locales</Nav.Link>
        </Nav>
     <Form inline>
-      <Button className="button-one">COMEDOR</Button>
-      <Button className="button-two">COCINA</Button>
+      <Button className="button-one usert">COMEDOR</Button>
+      <Button className="button-two usert">COCINA</Button>
     </Form>
   </Navbar.Collapse>
 </Navbar>

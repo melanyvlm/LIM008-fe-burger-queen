@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navigation from './Functions/Navigation';
-import MenuNavbar from './Functions/MenuNavbar';
-import Menu from './Functions/Menu.js';
+import Navigation from './Components/Navigation.js';
+import MenuNavbar from './Components/MenuNavbar.js';
 import AllMenu from './Components/AllMenu.js'
-// import UserTable from '../src/tables/UserTable.js';
-// var ReactBootstrap = require('react-bootstrap');
-// var MenuItem = ReactBootstrap.MenuItem;
 
 class App extends Component {
       render(){
