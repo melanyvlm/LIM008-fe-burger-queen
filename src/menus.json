@@ -42,25 +42,25 @@
      },
      {
         "id" : 7,
-        "title":"agua 500ml",
+        "title":"agua de 500ml",
         "food":"dinner",
          "price":"5"
          }, 
           {
             "id" : 8,
-            "title":"agua 750ml",
+            "title":"agua de 750ml",
              "food":"dinner",
              "price":"7"
              },
     {
       "id" : 9,
-       "title":"gaseosa 500ml",
+       "title":"gaseosa de 500ml",
        "food":"dinner",
        "price":"7"
      },
      {
         "id" : 10,
-         "title":"gaseosa 750ml",
+         "title":"gaseosa de 750ml",
          "food":"dinner",
          "price":"10"
        }

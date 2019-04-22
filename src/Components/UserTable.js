@@ -1,25 +1,35 @@
-import React from 'react'
-import './Components.css';
-
-const UserTable = () => (
+import React  from 'react';
+// import './Components.css';
+const UserTable = props => (
     <table>
-        <thead>
-            <tr>
-            <th>Name</th>
-            <th>Username</th>
-            <th>Actions</th>    
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          {/* <th>Actions</th> */}
+        </tr>
+      </thead>
+      <tbody>
+        {props.adding.length > 0 ? (
+          props.adding.map(user => (
+            <tr key={user.id}>
+            {/* <i class="fas fa-minus"></i> */}
+              <td>{user.title}</td>
+              <td>s/.{user.price}</td>
+              <td>
+              <button type ="button"className="button muted-button" onClick ={() => props.deleteUser(user.id)} >Delete</button>
+              {/* <button type="button" onClick={() => setChange('breaskfast')}>DESAYUNO</button> */}
+
+              </td>
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Name data</td>
-                <td>Username data</td>
-                <td>
-                    <button className="button usert muted-button">Edit</button>
-                    <button className="button usert muted-button">Delete</button>
-               </td>
-            </tr>
-        </tbody>
+          ))
+        ) : (
+          <tr>
+            <td colSpan={3}>Añade un pedido !</td>
+          </tr>
+        )}
+      </tbody>
     </table>
-)
-export default UserTable
+  )
+  
+  export default UserTable
