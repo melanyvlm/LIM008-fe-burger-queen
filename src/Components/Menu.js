@@ -1,22 +1,13 @@
 // import React, { Component } from 'react'
 import './Components.css';
+import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import React , {useState, useEffect} from 'react';
+import React , {useState} from 'react';
 /**Siguiendo a Tania de react Hooks */
-// function reuseData() {
-//   const [menudata, setMenudata] = useState([]);
-//   useEffect(() => {
-//     fetch('https://raw.githubusercontent.com/melanyvlm/LIM008-fe-burger-queen/developmel/src/menus.json')
-//       .then(res => res.json())
-//       .then((json) => {
-//         setMenudata(json);
-//       });
-//   });
-//   return menudata;
-//  }
 
-const Menu = (props) => {
+
+const Menu = ({addMenu, menudata}) => {
 // const usingData = reuseData();
 const[change, setChange] = useState('breakfast');
 
@@ -24,10 +15,10 @@ const[change, setChange] = useState('breakfast');
 <div className="menu">
 <div className="row">
 
-{/* <Form inline >
+ {/* <Form inline >
       <Button className="button-one usert">COMEDOR</Button>
       <Button className="button-two usert">COCINA</Button>
-    </Form> */}
+    </Form>  */}
    <div className="col-6">
                 <button type="button" onClick={() => setChange('breaskfast')}>DESAYUNO</button>
                 </div> 
@@ -36,9 +27,10 @@ const[change, setChange] = useState('breakfast');
           </div>
       </div>
       <div >
-           {props.menudata.filter(compare => (compare.food === 'breaskfast')).map(item => (
-          <div onClick={() => props.addMenu(item.title)}>
-      <div className="card">{`${item.title}`}</div>   
+           {menudata.filter(compare => (compare.food === change)).map(item => (
+          <div onClick={() => addMenu(item.title)}>
+          <div >
+      <div className="card ">{`${item.title}`}</div>   
 <div className="card-body">
     {/* <h5 className="card-title">{`${item.title}`} */}
       {/* <span>s/.{`${item.price}`} </span> */}
@@ -48,13 +40,24 @@ const[change, setChange] = useState('breakfast');
 {/* </div> */}
            
           </div >
+          </div>
         ))}
 </div>
   </div>
   )
 
 }
+
+Menu.propTypes = {
+  addMenu: PropTypes.func.isRequired,
+  menudata:PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+};
+
 export default Menu;
+
+
+
+
 /* <div className="card" style="width: 18rem;">
   <img className="card-img-top" alt="Card image cap">
   <div className="card-body">

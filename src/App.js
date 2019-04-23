@@ -16,30 +16,30 @@ const App = () => {
           setMenudata(json);
         });
     });
-
-    console.log(setMenudata)
   /**añade cada elemento del menu */
   const [adding, setAdding] = useState([]);
   const addMenu = (title) => {
     menudata.filter(item => (item.title === title ? setAdding([...adding, item]) : item));
   };
 
-  const deleteUser = id => {
-    (adding.filter(user => user.id !== id))
-}
+  const deleteUser = (title)=> {
+setAdding(adding.filter(item => item.title !== title));
+};
+
 return (
      <div className="App">
      <MenuNavbar></MenuNavbar>
      <Navigation></Navigation>
 <div>
   <div className="row">
-     <div className="col-6">
+     <div className="col-sm-6">
      <Menu addMenu={addMenu}
         menudata={menudata} >
        </Menu>
       </div>
-     <div className="col-6">
-     <UserTable adding={adding} deleteUser={deleteUser}></UserTable>
+     <div className="col-sm-6 ">
+     <UserTable adding={adding}deleteUser={deleteUser} setAdding={setAdding}
+ ></UserTable>
      </div>
    </div>
  </div>

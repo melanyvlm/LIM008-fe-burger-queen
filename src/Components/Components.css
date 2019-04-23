@@ -3,3 +3,23 @@
     margin-right: .5rem;
 
 }
+/* .card-flex{
+    display: flex;
+} */
+.tha{
+    width:25%;;
+}
+.thead{
+  border-bottom: 1px solid #fff;
+ }
+table {
+    width: 80% !important;
+    margin: .5rem 1rem 1rem 1rem !important;
+    border: 1px solid #e1dbdb;
+    box-shadow: 0 0 4px 0px #c5c5bd;
+    color: #ffff;
+    background-color:#664442;
+  }
+  tr {
+    border-bottom: 1px solid #80808030;
+  }

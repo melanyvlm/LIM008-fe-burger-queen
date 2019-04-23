@@ -1,35 +1,80 @@
 import React  from 'react';
 // import './Components.css';
-const UserTable = props => (
-    <table>
-      <thead>
-        <tr>
+import PropTypes from 'prop-types';
+const UserTable = ({menudata,adding,setAdding ,deleteUser}) => {
+  const addItems = (it , user) => {
+    user.count += 1;
+    setAdding([...it]);
+  }
+  return(
+<table>
+       <thead> 
+        <tr className="thead">
           <th>Producto</th>
           <th>Precio</th>
-          {/* <th>Actions</th> */}
-        </tr>
+          <th>Opción</th>
+        </tr> 
       </thead>
       <tbody>
-        {props.adding.length > 0 ? (
-          props.adding.map(user => (
+        {adding.length > 0 ? (
+        adding.map(user => (
+            <>
             <tr key={user.id}>
-            {/* <i class="fas fa-minus"></i> */}
-              <td>{user.title}</td>
-              <td>s/.{user.price}</td>
-              <td>
-              <button type ="button"className="button muted-button" onClick ={() => props.deleteUser(user.id)} >Delete</button>
-              {/* <button type="button" onClick={() => setChange('breaskfast')}>DESAYUNO</button> */}
-
-              </td>
-            </tr>
-          ))
+            <button type="button" onClick={() => addItems(adding, user)}> +</button>
+            <td>{user.title}</td>
+            <span>{user.price * user.count}</span>
+            <span>{user.count}</span>
+            <button>-</button>
+            <td>s/.{user.count}</td>
+            <td>
+              <button type="button" className="button muted-button" onClick={() => deleteUser(user.title)}>Delete</button>
+            </td>
+          </tr>
+        
+          </>
+          
+       
+          
+            ))
+        
         ) : (
           <tr>
             <td colSpan={3}>Añade un pedido !</td>
           </tr>
         )}
+            <>
+                 <tr class="total">
+        <td>TOTAL</td>
+        <td>S/.0.00</td>      <button>Enviar a cocina</button>
+
+
+      </tr>
+
+            </>
+              {/* <>
+                 <tr class="total">
+        <td>TOTAL</td>
+        <td>S/.0.00</td>
+      </tr>
+            </> */}
+
       </tbody>
     </table>
+
+
   )
-  
+    
+          };
+UserTable.propTypes = {
+  menudata:PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  addItems:PropTypes.func.isRequired,
+  adding:PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  setAdding: PropTypes.func.isRequired,
+  deleteUser:PropTypes.func.isRequired,
+};
   export default UserTable
+          
+//  <tr class="total">
+//  <td>TOTAL</td>
+//  <td>S/. {{total}}.00</td>
+// </tr>

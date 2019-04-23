@@ -2,34 +2,34 @@
 {
     "id" : 1,
         "title":"Café Americano",
-         "food":"breaskfast",
-         "price":"5"
+        "price":5,
+         "food":"breaskfast"
  },
     {
          "id" : 2,
           "title":"Café Americano",
-          "food":"breaskfast",
-          "price":"7"
+          "price":7,
+          "food":"breaskfast"
      },
      {
         "id" : 3,
          "title":"Sándwich de jamón y queso",
-         "food":"breaskfast",
-         "price":"10"
+         "price":10,
+         "food":"breaskfast"
     },
    {
     "id" : 4,
     "title":"hamburger simple",
      "food":"dinner",
-     "price":"10",
+     "price":10,
      "options":["res", "pollo", "vegetariana"],
      "aditional":["queso","huevo"]
      },
      {
         "id" : 5,
         "title":"hamburger doble",
+        "price":15,
          "food":"dinner",
-         "price":"15",
          "options":["res", "pollo", "vegetariana"],
          "aditional":["queso","huevo"]
          },
@@ -37,32 +37,33 @@
     "id" : 6,
     "title":"acompañamientos",
     "type" :["papas fritas","aros de cebolla"],
-     "food":"dinner",
-     "price":"5"
+    "price":5,
+     "food":"dinner"
+ 
      },
      {
         "id" : 7,
         "title":"agua de 500ml",
-        "food":"dinner",
-         "price":"5"
+        "price":5,
+        "food":"dinner"
          }, 
           {
             "id" : 8,
+            "price":7,
             "title":"agua de 750ml",
-             "food":"dinner",
-             "price":"7"
+             "food":"dinner"
              },
     {
       "id" : 9,
-       "title":"gaseosa de 500ml",
-       "food":"dinner",
-       "price":"7"
+      "price":7,
+      "title":"gaseosa de 500ml",
+       "food":"dinner"
      },
      {
         "id" : 10,
          "title":"gaseosa de 750ml",
-         "food":"dinner",
-         "price":"10"
+         "price":10,
+         "food":"dinner"
        }
 ]
 
