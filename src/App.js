@@ -18,10 +18,25 @@ const App = () => {
     });
   /**añade cada elemento del menu */
   const [adding, setAdding] = useState([]);
-  const addMenu = (title) => {
-    menudata.filter(item => (item.title === title ? setAdding([...adding, item]) : item));
-  };
-
+  // const addMenu = (eachMenu) => {
+  //   menudata.find(item => (item.id === id ? setAdding([...adding, item]) : item));
+  // };
+  // const addMenu = (eachMenu) => {
+  //   adding.find(item => (item.id === eachMenu.id ? setAdding([...adding]) : setAdding([{...eachMenu, count:1}, ...adding])));
+  // };
+  const addMenu = (menu) => {
+    if (adding.find(e => e.id === menu.id)) {
+      setAdding([...adding]);
+    } else {
+      setAdding([{ ...menu, count: 1 }, ...adding]);
+    }
+}
+// const totalCost = (menu) => {
+//   // console.log(menu);
+//   const precio = menu.map(ele => ele.precio * ele.count);
+//   const total = precio.reduce((a, b) => a + b, 0);
+//   return total;
+// };
   const deleteUser = (title)=> {
 setAdding(adding.filter(item => item.title !== title));
 };

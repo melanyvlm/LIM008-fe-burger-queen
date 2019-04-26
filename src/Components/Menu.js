@@ -28,12 +28,12 @@ const[change, setChange] = useState('breakfast');
       </div>
       <div >
            {menudata.filter(compare => (compare.food === change)).map(item => (
-          <div onClick={() => addMenu(item.title)}>
+          <div onClick={() => addMenu(item)}>
           <div >
       <div className="card ">{`${item.title}`}</div>   
 <div className="card-body">
     {/* <h5 className="card-title">{`${item.title}`} */}
-      {/* <span>s/.{`${item.price}`} </span> */}
+      <span>s/.{`${item.price}`} </span>
     {/* </h5> */}
     {/* <p className="card-text">{`${item.price}`}</p> */}
      </div>

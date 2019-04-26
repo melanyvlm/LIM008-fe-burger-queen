@@ -1,11 +1,14 @@
-import React  from 'react';
+import React , {useState} from 'react';
 // import './Components.css';
 import PropTypes from 'prop-types';
 const UserTable = ({menudata,adding,setAdding ,deleteUser}) => {
   const addItems = (it , user) => {
     user.count += 1;
     setAdding([...it]);
-  }
+  };
+  // const deleteItems = () => {
+    
+  // }
   return(
 <table>
        <thead> 
@@ -22,10 +25,11 @@ const UserTable = ({menudata,adding,setAdding ,deleteUser}) => {
             <tr key={user.id}>
             <button type="button" onClick={() => addItems(adding, user)}> +</button>
             <td>{user.title}</td>
-            <span>{user.price * user.count}</span>
-            <span>{user.count}</span>
+            <span>s/.{user.price * user.count}</span>
+            {/* <span>{user.count}</span> */}
+            {/* {user.count} */}
             <button>-</button>
-            <td>s/.{user.count}</td>
+            <td>s/.{user.price}</td>
             <td>
               <button type="button" className="button muted-button" onClick={() => deleteUser(user.title)}>Delete</button>
             </td>
